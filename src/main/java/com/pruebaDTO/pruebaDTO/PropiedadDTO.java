@@ -15,5 +15,5 @@ public class PropiedadDTO {
     private Double valor_alquiler;
     private String nombre;
     private String apellido;
-    
+
 }

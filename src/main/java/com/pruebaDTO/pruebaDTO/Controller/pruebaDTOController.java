@@ -2,22 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Controller;
+package com.pruebaDTO.pruebaDTO.Controller;
 
 import com.pruebaDTO.pruebaDTO.Inquilino;
 import com.pruebaDTO.pruebaDTO.Propiedad;
 import com.pruebaDTO.pruebaDTO.PropiedadDTO;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class pruebaDTOcontroller {
+public class pruebaDTOController {
     
-    @GetMapping ("/propiedad/{id}")
+    @GetMapping ("/propiedad")
     @ResponseBody
-    public PropiedadDTO devolverPropiedad(@PathVariable Long id){
+    public PropiedadDTO devolverPropiedad(){
         PropiedadDTO propDTO = new PropiedadDTO();
         Inquilino inqui = new Inquilino(1L,"123456", "Jorge", "Perez", "Chapista");
         Propiedad prop = new Propiedad(2L,"Dpto","Quirno 999", 150.0, 25000.5);
